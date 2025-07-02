@@ -13,4 +13,6 @@ Route::get('/home', function () {
 Route::get('/kategori', function () {
     return view('kategori');
 });
-
+Route::get('/tentangkami', function () {
+    return view('tentangkami');
+});
