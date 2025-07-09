@@ -1,14 +1,5 @@
 @extends('layouts.app')
-
-@section('content')
-    <div class="container" style="padding: 20px;">
-        <!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team - Artikel</title>
-    <style>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -231,10 +222,8 @@
             }
         }
     </style>
-</head>
-<body>
-
-
+@section('content')
+    <div class="container" style="padding: 20px;">
     <div class="container">
         <h1 class="page-title">Team</h1>
 
@@ -263,7 +252,7 @@
             <div class="team-member">
                 <div class="member-photo">foto</div>
                 <div class="member-info">
-                    <h3>reyhana</h3>
+                    <h3>Reyhana</h3>
                     <p>Product Manager</p>
                 </div>
             </div>
@@ -371,7 +360,5 @@
             });
         });
     </script>
-</body>
-</html>
     </div>
 @endsection
