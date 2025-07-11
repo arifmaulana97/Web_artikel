@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,11 +12,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Panggil seeder kategori terlebih dahulu
+        $this->call(CategorySeeder::class);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // Panggil UserFactory untuk membuat 10 user dummy
+        \App\Models\User::factory(10)->create();
+
+        // Panggil ArticleSeeder (akan membuat admin user jika belum ada)
+        $this->call(ArticleSeeder::class);
+
+        // Jika Anda ingin membuat satu user admin secara spesifik
+        // \App\Models\User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
     }
 }
